@@ -1,0 +1,11 @@
+{
+  "extends": "@it-diots/typescript-config/nextjs.json",
+  "compilerOptions": {
+    "sourceMap": true,
+    "noEmit": false,
+    "baseUrl": "src",
+    "outDir": "dist"
+  },
+  "include": ["src"],
+  "exclude": ["node_modules", "dist"]
+}
