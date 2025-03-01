@@ -1,3 +1,3 @@
-export default function Page() {
+export function BookmarkPage() {
   return <div>BookmarkPage</div>;
 }

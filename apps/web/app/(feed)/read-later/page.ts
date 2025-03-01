@@ -1,1 +1,1 @@
-export { ReadLaterPage as default } from '@/pages';
+export { ReadLaterPage as default } from '@/pages/read-later';
