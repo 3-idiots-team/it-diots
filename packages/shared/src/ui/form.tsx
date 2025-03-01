@@ -2,8 +2,8 @@
 
 import * as React from 'react';
 
-import { Label } from '@it-diots/shared/components/ui/label';
 import { cn } from '@it-diots/shared/lib/utils';
+import { Label } from '@it-diots/shared/ui/label';
 
 import {
   Controller,

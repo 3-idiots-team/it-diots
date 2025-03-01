@@ -11,8 +11,8 @@
     "prefix": ""
   },
   "aliases": {
-    "components": "@it-diots/shared/components",
-    "ui": "@it-diots/shared/components/ui",
+    "components": "@it-diots/shared/ui",
+    "ui": "@it-diots/shared/ui",
     "utils": "@it-diots/shared/lib/utils",
     "lib": "@it-diots/shared/lib",
     "hooks": "@it-diots/shared/hooks"

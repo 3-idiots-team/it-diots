@@ -1,3 +1,4 @@
+import { NAVIGATION_ROUTES } from '@it-diots/shared/constants/page-routes';
 import {
   Sidebar as ShadcnSidebar,
   SidebarContent,
@@ -8,8 +9,7 @@ import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
-} from '@it-diots/shared/components/ui';
-import { NAVIGATION_ROUTES } from '@it-diots/shared/constants/page-routes';
+} from '@it-diots/shared/ui';
 
 export const Sidebar = () => {
   return (

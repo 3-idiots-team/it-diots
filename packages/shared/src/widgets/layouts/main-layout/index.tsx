@@ -1,6 +1,6 @@
 import { PropsWithChildren } from 'react';
 
-import { SidebarProvider, SidebarTrigger } from '@it-diots/shared/components/ui';
+import { SidebarProvider, SidebarTrigger } from '@it-diots/shared/ui';
 
 import { Sidebar } from './sidebar';
 
