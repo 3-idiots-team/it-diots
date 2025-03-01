@@ -1,3 +1,9 @@
+import { FeedList } from '@/widgets';
+
 export function FeedPage() {
-  return <div>FeedPage</div>;
+  return (
+    <div className="p-4 w-full">
+      <FeedList />
+    </div>
+  );
 }
