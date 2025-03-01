@@ -1,3 +1,3 @@
-export default function Page() {
+export function ReadLaterPage() {
   return <div>ReadLaterPage</div>;
 }

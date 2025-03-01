@@ -1,1 +1,1 @@
-export { TagPage as default } from '@/pages';
+export { TagPage as default } from '@/pages/tag';
