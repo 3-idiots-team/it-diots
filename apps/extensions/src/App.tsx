@@ -4,7 +4,7 @@ import {
   AccordionItem,
   AccordionTrigger,
   Button,
-} from '@it-diots/shared/components/ui';
+} from '@it-diots/shared/ui';
 import { useRouter } from 'next/navigation';
 
 export default function App() {
