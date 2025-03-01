@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "ui": "pnpm dlx shadcn@latest",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix ."
   },
   "peerDependencies": {
     "react": "^18"
