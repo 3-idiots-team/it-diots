@@ -1,1 +1,1 @@
-export { FeedPage as default } from '@/src/pages';
+export { FeedPage as default } from '@/pages';

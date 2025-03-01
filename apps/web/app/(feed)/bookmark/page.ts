@@ -1,1 +1,1 @@
-export { BookMarkPage as default } from '@/src/pages';
+export { BookMarkPage as default } from '@/pages';

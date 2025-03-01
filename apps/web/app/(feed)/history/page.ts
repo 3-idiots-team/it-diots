@@ -1,1 +1,1 @@
-export { HistoryPage as default } from '@/src/pages';
+export { HistoryPage as default } from '@/pages';
