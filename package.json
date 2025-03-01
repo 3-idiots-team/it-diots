@@ -8,6 +8,7 @@
     "build:web": "pnpm --filter @it-diots/web build",
     "dev": "turbo dev",
     "lint": "turbo lint",
+    "lint:fix": "turbo lint:fix",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "web": "pnpm --filter @it-diots/web",
     "web:dev": "pnpm --filter @it-diots/web dev",
