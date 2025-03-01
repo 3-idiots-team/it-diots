@@ -1,1 +1,1 @@
-export { default as ReadLaterPage } from './page';
+export { ReadLaterPage } from './ui';

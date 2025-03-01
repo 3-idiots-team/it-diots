@@ -1,1 +1,1 @@
-export { default as TagPage } from './page';
+export { TagPage } from './ui';
