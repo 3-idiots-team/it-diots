@@ -65,7 +65,11 @@ export function FeedUpvoteButton({
       onClick={handleUpvote}
       {...props}
     >
-      <ArrowBigUp className="w-4 h-4" {...(optimisticHasUpvoted && { color: 'green' })} />
+      <ArrowBigUp
+        className={cn('w-4 h-4', {
+          'text-green-500': optimisticHasUpvoted,
+        })}
+      />
 
       <span className={cn({ 'text-green-500': optimisticHasUpvoted })}>
         {optimisticUpvoteCount}

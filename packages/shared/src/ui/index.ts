@@ -1,4 +1,5 @@
 export { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from './accordion';
+export { AspectRatio } from './aspect-ratio';
 export { Badge, badgeVariants } from './badge';
 export { Button, type ButtonProps, buttonVariants } from './button';
 export { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from './card';

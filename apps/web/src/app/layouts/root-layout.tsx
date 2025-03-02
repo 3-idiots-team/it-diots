@@ -5,7 +5,7 @@ import { MainLayout } from '@it-diots/shared/widgets/layouts';
 
 import '@it-diots/shared/globals.css';
 
-import { TOAST_PROPS } from '@/shared';
+import { TOAST_PROPS } from '@/shared/constants';
 
 const inter = Inter({ subsets: ['latin'] });
 

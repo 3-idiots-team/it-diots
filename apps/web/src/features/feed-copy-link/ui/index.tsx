@@ -4,7 +4,7 @@ import { Button, ButtonProps, toast } from '@it-diots/shared/ui';
 
 import { LinkIcon } from 'lucide-react';
 
-interface FeedCopyLinkButtonProps extends ButtonProps {
+interface FeedCopyLinkButtonProps extends Omit<ButtonProps, 'size' | 'type' | 'onClick'> {
   feedId: number;
 }
 
