@@ -55,7 +55,6 @@ export function FeedUpvoteButton({
     }
   };
 
-  // FIXME: 버튼이 아니라 체크박스로 변경하기
   return (
     <Button
       size="sm"
