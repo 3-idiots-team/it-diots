@@ -60,4 +60,5 @@ export {
   SidebarTrigger,
 } from './sidebar';
 export { Skeleton } from './skeleton';
+export { toast, Toaster, type ToasterProps } from './sonner';
 export { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from './tooltip';
