@@ -20,6 +20,7 @@ export {
   FormLabel,
   FormMessage,
 } from './form';
+export { Icon } from './icon';
 export { Input } from './input';
 export { Label } from './label';
 export {

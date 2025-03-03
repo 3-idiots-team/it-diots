@@ -1,3 +1,9 @@
+import { GithubLogin } from '@/features/github-login';
+
 export function OnboardingForm() {
-  return <div>1</div>;
+  return (
+    <div>
+      <GithubLogin />
+    </div>
+  );
 }
