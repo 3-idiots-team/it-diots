@@ -1,6 +1,6 @@
 'use client';
 
-import { useOptimistic, useTransition } from 'react';
+import { MouseEvent, useOptimistic, useTransition } from 'react';
 
 import { cn } from '@it-diots/shared/lib/utils';
 import { Button, ButtonProps } from '@it-diots/shared/ui';
@@ -27,7 +27,10 @@ export function FeedDownvoteButton({
     (_, newHasDownvoted: boolean) => newHasDownvoted
   );
 
-  const handleDownvote = async () => {
+  const handleDownvote = async (e: MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+    e.stopPropagation();
+
     const previousHasDownvoted = optimisticHasDownvoted;
 
     startTransition(() => {

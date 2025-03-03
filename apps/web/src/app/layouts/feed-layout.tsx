@@ -9,13 +9,21 @@ import { TOAST_PROPS } from '@/shared/constants';
 
 const inter = Inter({ subsets: ['latin'] });
 
-export function FeedLayout({ children }: { children: React.ReactNode }) {
+export function FeedLayout({
+  children,
+  modal,
+}: {
+  children: React.ReactNode;
+  modal: React.ReactNode;
+}) {
   return (
     <html lang="ko">
       <body className={inter.className}>
         <MainLayout>{children}</MainLayout>
 
         <Toaster {...TOAST_PROPS} />
+
+        {modal}
       </body>
     </html>
   );

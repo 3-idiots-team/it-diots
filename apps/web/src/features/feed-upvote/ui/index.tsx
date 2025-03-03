@@ -1,6 +1,6 @@
 'use client';
 
-import { useOptimistic, useTransition } from 'react';
+import { MouseEvent, useOptimistic, useTransition } from 'react';
 
 import { cn } from '@it-diots/shared/lib/utils';
 import { Button, ButtonProps } from '@it-diots/shared/ui';
@@ -39,7 +39,10 @@ export function FeedUpvoteButton({
       })
     );
 
-  const handleUpvote = async () => {
+  const handleUpvote = async (e: MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+    e.stopPropagation();
+
     const changedUpvoteCount = optimisticHasUpvoted
       ? optimisticUpvoteCount - 1
       : optimisticUpvoteCount + 1;
