@@ -7,7 +7,9 @@ const inter = Inter({ subsets: ['latin'] });
 export function OnboardingLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="ko">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <div className="w-full h-screen">{children}</div>
+      </body>
     </html>
   );
 }
