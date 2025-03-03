@@ -9,7 +9,7 @@ import { TOAST_PROPS } from '@/shared/constants';
 
 const inter = Inter({ subsets: ['latin'] });
 
-export function RootLayout({ children }: { children: React.ReactNode }) {
+export function FeedLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="ko">
       <body className={inter.className}>
