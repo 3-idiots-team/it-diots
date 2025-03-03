@@ -1,1 +1,1 @@
-export { GET as default } from '@/app/auth/handler';
+export { GET } from '@/app/auth/handler';
