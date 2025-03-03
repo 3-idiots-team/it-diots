@@ -1,5 +1,7 @@
 export { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from './accordion';
-export { Button, buttonVariants } from './button';
+export { AspectRatio } from './aspect-ratio';
+export { Badge, badgeVariants } from './badge';
+export { Button, type ButtonProps, buttonVariants } from './button';
 export { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from './card';
 export {
   DropdownMenu,
@@ -60,4 +62,5 @@ export {
   SidebarTrigger,
 } from './sidebar';
 export { Skeleton } from './skeleton';
+export { toast, Toaster, type ToasterProps } from './sonner';
 export { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from './tooltip';

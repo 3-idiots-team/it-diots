@@ -1,7 +1,7 @@
 import { BookMarked, History, Layers, LucideIcon, Newspaper, Tag } from 'lucide-react';
 
 export const PAGE_ROUTES = {
-  feed: '/feed',
+  feed: '/',
   readLater: '/read-later',
   bookmark: '/bookmark',
   history: '/history',
