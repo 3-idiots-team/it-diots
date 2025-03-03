@@ -2,7 +2,9 @@ import Image from 'next/image';
 
 import { AspectRatio, Badge, Card, CardContent, CardHeader, CardTitle } from '@it-diots/shared/ui';
 
-import { FeedBookmarkButton, FeedCopyLinkButton, FeedUpvoteButton } from '@/features';
+import { FeedBookmarkButton } from '@/features/feed-bookmark';
+import { FeedCopyLinkButton } from '@/features/feed-copy-link';
+import { FeedUpvoteButton } from '@/features/feed-upvote';
 
 export function FeedList() {
   return (

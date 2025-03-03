@@ -1,4 +1,4 @@
-import { FeedList } from '@/widgets';
+import { FeedList } from '@/widgets/feed-list';
 
 export function FeedPage() {
   return (
