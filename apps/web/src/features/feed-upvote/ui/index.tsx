@@ -15,6 +15,8 @@ interface FeedUpvoteProps extends Omit<ButtonProps, 'size' | 'type'> {
   hasUpvoted: boolean;
 }
 
+type OptimisticUpvoteState = Pick<FeedUpvoteProps, 'hasUpvoted' | 'upvoteCount'>;
+
 export function FeedUpvoteButton({
   className,
   feedId,
@@ -24,23 +26,29 @@ export function FeedUpvoteButton({
 }: FeedUpvoteProps) {
   const [isPending, startTransition] = useTransition();
 
-  const [optimisticHasUpvoted, toggleUpvote] = useOptimistic(
-    hasUpvoted,
-    (prevHasUpvoted) => !prevHasUpvoted
-  );
-
-  const [optimisticUpvoteCount, addUpvoteCount] = useOptimistic(
-    upvoteCount,
-    (prevUpvoteCount) => (prevUpvoteCount || 0) + 1
-  );
+  const [{ hasUpvoted: optimisticHasUpvoted, upvoteCount: optimisticUpvoteCount }, toggleUpvote] =
+    useOptimistic(
+      {
+        hasUpvoted,
+        upvoteCount,
+      },
+      (prev, { hasUpvoted, upvoteCount }: OptimisticUpvoteState) => ({
+        ...prev,
+        hasUpvoted,
+        upvoteCount,
+      })
+    );
 
   const handleUpvote = async () => {
-    const previousUpvoteCount = optimisticUpvoteCount;
-    const previousHasUpvoted = optimisticHasUpvoted;
+    const changedUpvoteCount = optimisticHasUpvoted
+      ? optimisticUpvoteCount - 1
+      : optimisticUpvoteCount + 1;
 
     startTransition(() => {
-      toggleUpvote(!optimisticHasUpvoted);
-      addUpvoteCount(optimisticUpvoteCount + 1);
+      toggleUpvote({
+        hasUpvoted: !optimisticHasUpvoted,
+        upvoteCount: changedUpvoteCount,
+      });
     });
 
     try {
@@ -49,8 +57,10 @@ export function FeedUpvoteButton({
       console.error('업보트 실패', error);
 
       startTransition(() => {
-        toggleUpvote(previousHasUpvoted);
-        addUpvoteCount(previousUpvoteCount);
+        toggleUpvote({
+          hasUpvoted: !optimisticHasUpvoted,
+          upvoteCount: optimisticUpvoteCount - 1,
+        });
       });
     }
   };

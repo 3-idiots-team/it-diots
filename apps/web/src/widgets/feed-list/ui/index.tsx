@@ -39,7 +39,7 @@ export function FeedList() {
               </div>
 
               <div className="flex justify-between items-center gap-2">
-                <FeedUpvoteButton feedId={1} upvoteCount={0} hasUpvoted={false} />
+                <FeedUpvoteButton feedId={1} upvoteCount={value} hasUpvoted={2 % value === 0} />
                 <FeedBookmarkButton feedId={1} hasBookmarked={false} />
                 <FeedCopyLinkButton feedId={1} />
               </div>
