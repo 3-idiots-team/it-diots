@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 @custom-variant dark (&:is(.dark *));
 
 @layer base {
@@ -82,5 +83,23 @@
     --sidebar-accent-foreground: 240 4.8% 95.9%;
     --sidebar-border: 240 3.7% 15.9%;
     --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer components {
+  [data-slot='card'] {
+    @apply !py-4 !gap-4;
+  }
+
+  [data-slot='card-header'] {
+    @apply !px-4;
+  }
+
+  [data-slot='card-content'] {
+    @apply !px-4;
+  }
+
+  [data-slot='card-footer'] {
+    @apply !px-4;
   }
 }
