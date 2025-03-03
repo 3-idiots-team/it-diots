@@ -3,15 +3,17 @@ import Image from 'next/image';
 import { AspectRatio, Badge, Card, CardContent, CardHeader, CardTitle } from '@it-diots/shared/ui';
 
 import { FeedBookmarkButton } from '@/features/feed-bookmark';
+import { FeedComment } from '@/features/feed-comment/ui';
 import { FeedCopyLinkButton } from '@/features/feed-copy-link';
+import { FeedDownvoteButton } from '@/features/feed-down-vote';
 import { FeedUpvoteButton } from '@/features/feed-upvote';
 
 export function FeedList() {
   return (
-    <div className="grid grid-cols-1 gap-8 md:gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+    <div className="grid grid-cols-1 gap-8 md:gap-4 lg:grid-cols-2 xl:grid-cols-3">
       {[1, 2, 3].map((value) => {
         return (
-          <Card key={value}>
+          <Card className="cursor-pointer" key={value}>
             <CardHeader>
               <CardTitle>Shadcn: 생상적인 UI 개발의 비결</CardTitle>
             </CardHeader>
@@ -41,8 +43,13 @@ export function FeedList() {
               </div>
 
               <div className="flex justify-between items-center gap-2">
-                <FeedUpvoteButton feedId={1} upvoteCount={value} hasUpvoted={2 % value === 0} />
-                <FeedBookmarkButton feedId={1} hasBookmarked={false} />
+                <div className="flex items-center gap-1">
+                  <FeedUpvoteButton feedId={1} upvoteCount={value} hasUpvoted={value === 1} />
+                  <FeedDownvoteButton feedId={1} hasDownvoted={value === 1} />
+                </div>
+
+                <FeedComment commentCount={value} />
+                <FeedBookmarkButton feedId={1} hasBookmarked={value === 1} />
                 <FeedCopyLinkButton feedId={1} />
               </div>
             </CardContent>

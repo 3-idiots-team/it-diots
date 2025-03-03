@@ -1,0 +1,1 @@
+export { FeedDownvoteButton } from './ui';
