@@ -1,11 +1,11 @@
 'use client';
 
-import { useOptimistic, useTransition } from 'react';
+import { MouseEvent, useOptimistic, useTransition } from 'react';
 
 import { cn } from '@it-diots/shared/lib/utils';
 import { Button, ButtonProps } from '@it-diots/shared/ui';
 
-import { BookmarkCheckIcon, BookmarkIcon } from 'lucide-react';
+import { BookMarkedIcon, BookmarkIcon } from 'lucide-react';
 
 import { toggleBookmarkFeed } from '@/shared/actions/feed';
 
@@ -27,7 +27,10 @@ export function FeedBookmarkButton({
     (prevHasBookmarked) => !prevHasBookmarked
   );
 
-  const handleBookmarkToggle = async () => {
+  const handleBookmarkToggle = async (e: MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+    e.stopPropagation();
+
     const previousHasBookmarked = optimisticHasBookmarked;
 
     startTransition(() => {
@@ -49,16 +52,16 @@ export function FeedBookmarkButton({
     <Button
       size="icon"
       type="button"
-      variant="ghost"
+      variant={optimisticHasBookmarked ? 'secondary' : 'ghost'}
       disabled={isPending}
       className={cn(className)}
       onClick={handleBookmarkToggle}
       {...props}
     >
       {optimisticHasBookmarked ? (
-        <BookmarkCheckIcon className="w-4 h-4" />
+        <BookMarkedIcon className="w-5 h-5" />
       ) : (
-        <BookmarkIcon className="w-4 h-4" />
+        <BookmarkIcon className="w-5 h-5" />
       )}
     </Button>
   );

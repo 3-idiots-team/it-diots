@@ -1,6 +1,6 @@
 'use client';
 
-import { useOptimistic, useTransition } from 'react';
+import { MouseEvent, useOptimistic, useTransition } from 'react';
 
 import { cn } from '@it-diots/shared/lib/utils';
 import { Button, ButtonProps } from '@it-diots/shared/ui';
@@ -39,7 +39,10 @@ export function FeedUpvoteButton({
       })
     );
 
-  const handleUpvote = async () => {
+  const handleUpvote = async (e: MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+    e.stopPropagation();
+
     const changedUpvoteCount = optimisticHasUpvoted
       ? optimisticUpvoteCount - 1
       : optimisticUpvoteCount + 1;
@@ -71,12 +74,18 @@ export function FeedUpvoteButton({
       type="button"
       variant={optimisticHasUpvoted ? 'secondary' : 'ghost'}
       disabled={isPending}
-      className={cn(className, 'flex gap-1')}
+      className={cn(
+        className,
+        'group flex gap-1 hover:bg-green-100 hover:text-green-500 transition-all duration-300 min-w-[58px]',
+        {
+          'bg-green-100': optimisticHasUpvoted,
+        }
+      )}
       onClick={handleUpvote}
       {...props}
     >
       <ArrowBigUp
-        className={cn('w-4 h-4', {
+        className={cn('w-5 h-5', {
           'text-green-500': optimisticHasUpvoted,
         })}
       />
