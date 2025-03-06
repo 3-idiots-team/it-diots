@@ -31,7 +31,7 @@ export function FeedDetailModal() {
 
   return (
     <Dialog defaultOpen onOpenChange={handleOpenChange}>
-      <DialogContent>
+      <DialogContent className="max-w-screen-md w-full sm:max-w-screen-md">
         <DialogClose />
 
         <DialogHeader className="gap-4">

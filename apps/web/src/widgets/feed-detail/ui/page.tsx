@@ -10,7 +10,7 @@ import { FeedUpvoteButton } from '@/features/feed-upvote';
 
 export function FeedDetail() {
   return (
-    <div className="p-4 w-full flex flex-col gap-4">
+    <div className="p-4 max-w-screen-lg mx-auto flex flex-col gap-4">
       <p>Shadcn: 생상적인 UI 개발의 비결</p>
 
       <div className="flex items-center gap-2">
