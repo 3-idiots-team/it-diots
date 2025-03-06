@@ -18,5 +18,12 @@
       "cache": false,
       "persistent": true
     }
-  }
+  },
+  "globalDependencies": ["@it-diots/supabase"],
+  "globalEnv": [
+    "DB_PASSWORD",
+    "BASE_URL",
+    "NEXT_PUBLIC_SUPABASE_URL",
+    "NEXT_PUBLIC_SUPABASE_ANON_KEY"
+  ]
 }
