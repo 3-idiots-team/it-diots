@@ -31,7 +31,7 @@ export function FeedDetailModal() {
 
   return (
     <Dialog defaultOpen onOpenChange={handleOpenChange}>
-      <DialogContent className="max-w-screen-md w-full sm:max-w-screen-md">
+      <DialogContent className="sm:max-w-screen-md overflow-y-auto">
         <DialogClose />
 
         <DialogHeader className="gap-4">
@@ -48,7 +48,7 @@ export function FeedDetailModal() {
               src="https://github.com/shadcn-ui/ui/blob/main/apps/www/public/og.jpg?raw=true"
               alt="Shadcn: 생상적인 UI 개발의 비결"
               fill
-              className="object-cover"
+              className="object-cover rounded-xl"
             />
           </AspectRatio>
 
@@ -62,7 +62,7 @@ export function FeedDetailModal() {
         </DialogHeader>
 
         <div className="flex justify-between items-center gap-2">
-          <div className="flex items-center border border-transparent rounded-xl bg-zinc-50 overflow-hidden">
+          <div className="flex items-center border border-transparent rounded-xl bg-zinc-50 dark:bg-zinc-800 overflow-hidden">
             <FeedUpvoteButton feedId={1} upvoteCount={0} hasUpvoted={false} />
             <FeedDownvoteButton feedId={1} hasDownvoted={false} />
           </div>

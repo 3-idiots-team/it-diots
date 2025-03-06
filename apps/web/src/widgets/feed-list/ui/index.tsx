@@ -48,7 +48,7 @@ export function FeedList() {
               </div>
 
               <div className="flex justify-between items-center gap-2">
-                <div className="flex items-center border border-transparent rounded-xl bg-zinc-50 overflow-hidden">
+                <div className="flex items-center border border-transparent rounded-xl bg-zinc-50 dark:bg-zinc-800 overflow-hidden">
                   <FeedUpvoteButton feedId={1} upvoteCount={value} hasUpvoted={value === 1} />
                   <FeedDownvoteButton feedId={1} hasDownvoted={value === 1} />
                 </div>

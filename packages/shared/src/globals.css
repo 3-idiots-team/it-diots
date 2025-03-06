@@ -88,7 +88,7 @@
 
 @layer components {
   [data-slot='card'] {
-    @apply !py-4 !gap-4;
+    @apply !py-4 !gap-4 dark:bg-zinc-900;
   }
 
   [data-slot='card-header'] {
@@ -101,5 +101,9 @@
 
   [data-slot='card-footer'] {
     @apply !px-4;
+  }
+
+  [data-slot='dialog-content'] {
+    @apply dark:bg-zinc-900;
   }
 }
