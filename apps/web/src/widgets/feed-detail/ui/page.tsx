@@ -24,7 +24,7 @@ export function FeedDetail() {
           src="https://github.com/shadcn-ui/ui/blob/main/apps/www/public/og.jpg?raw=true"
           alt="Shadcn: 생상적인 UI 개발의 비결"
           fill
-          className="object-cover"
+          className="object-cover rounded-xl"
         />
       </AspectRatio>
 
@@ -37,7 +37,7 @@ export function FeedDetail() {
       </p>
 
       <div className="flex justify-between items-center gap-2">
-        <div className="flex items-center gap-1 border border-transparent rounded-xl bg-zinc-50 overflow-hidden">
+        <div className="flex items-center gap-1 border border-transparent rounded-xl bg-zinc-50 dark:bg-zinc-800 overflow-hidden">
           <FeedUpvoteButton feedId={1} upvoteCount={0} hasUpvoted={false} />
           <FeedDownvoteButton feedId={1} hasDownvoted={false} />
         </div>
