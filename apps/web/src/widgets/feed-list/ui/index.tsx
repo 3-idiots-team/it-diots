@@ -24,14 +24,11 @@ export function FeedList() {
             </CardHeader>
 
             <CardContent className="flex flex-col gap-2">
-              <AspectRatio ratio={16 / 9}>
-                <Image
-                  src="https://github.com/shadcn-ui/ui/blob/main/apps/www/public/og.jpg?raw=true"
-                  alt="Shadcn: 생상적인 UI 개발의 비결"
-                  fill
-                  className="object-cover rounded-xl"
-                />
-              </AspectRatio>
+              <div className="flex items-center gap-2">
+                <Badge variant="outline">#webdev</Badge>
+                <Badge variant="outline">#ui</Badge>
+                <Badge variant="outline">#design</Badge>
+              </div>
 
               <p className="text-sm text-muted-foreground">
                 {new Date().toLocaleDateString('ko-KR', {
@@ -41,11 +38,14 @@ export function FeedList() {
                 })}
               </p>
 
-              <div className="flex items-center gap-2">
-                <Badge variant="outline">#webdev</Badge>
-                <Badge variant="outline">#ui</Badge>
-                <Badge variant="outline">#design</Badge>
-              </div>
+              <AspectRatio ratio={16 / 9}>
+                <Image
+                  src="https://github.com/shadcn-ui/ui/blob/main/apps/www/public/og.jpg?raw=true"
+                  alt="Shadcn: 생상적인 UI 개발의 비결"
+                  fill
+                  className="object-cover rounded-xl"
+                />
+              </AspectRatio>
 
               <div className="flex justify-between items-center gap-2">
                 <div className="flex items-center border border-transparent rounded-xl bg-zinc-50 dark:bg-zinc-800 overflow-hidden">
