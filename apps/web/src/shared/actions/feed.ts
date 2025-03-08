@@ -17,3 +17,10 @@ export async function upvoteFeed(id: number) {
 
   return id;
 }
+
+export async function createFeed(formData: FormData) {
+  const title = formData.get('title');
+  const content = formData.get('content');
+
+  return { title, content };
+}
