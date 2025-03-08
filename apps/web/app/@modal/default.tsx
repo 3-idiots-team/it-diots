@@ -1,1 +1,1 @@
-export { Default as default } from '@/shared/ui/default';
+export { Default as default } from '@/shared/ui';

@@ -29,7 +29,7 @@ export function FeedList() {
                   src="https://github.com/shadcn-ui/ui/blob/main/apps/www/public/og.jpg?raw=true"
                   alt="Shadcn: 생상적인 UI 개발의 비결"
                   fill
-                  className="object-cover"
+                  className="object-cover rounded-xl"
                 />
               </AspectRatio>
 
