@@ -17,6 +17,9 @@
     "dev": {
       "cache": false,
       "persistent": true
+    },
+    "@it-diots/supabase#build": {
+      "cache": false
     }
   },
   "globalDependencies": ["@it-diots/shared"]
