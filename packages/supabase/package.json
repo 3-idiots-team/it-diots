@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "build": "tsc",
+    "build": "SUPABASE_CACHE_BUSTER=$(date +%s) tsc",
     "dev": "tsc --watch",
     "gen-type": "supabase gen types typescript --project-id tvdhvlmxynbiazmrngix --schema public > ./src/types/supabase.ts"
   },
