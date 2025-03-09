@@ -2,9 +2,7 @@
 
 import { MouseEvent } from 'react';
 
-import { Button, ButtonProps, toast } from '@it-diots/shared/ui';
-
-import { LinkIcon } from 'lucide-react';
+import { Button, ButtonProps, Icon, toast } from '@it-diots/shared/ui';
 
 interface FeedCopyLinkButtonProps extends Omit<ButtonProps, 'size' | 'type' | 'onClick'> {
   feedId: number;
@@ -22,7 +20,7 @@ export function FeedCopyLinkButton({ feedId, ...props }: FeedCopyLinkButtonProps
 
   return (
     <Button size="icon" type="button" variant="ghost" onClick={handleCopyLink} {...props}>
-      <LinkIcon className="w-5 h-5" />
+      <Icon name="Link" className="w-5 h-5" />
     </Button>
   );
 }
