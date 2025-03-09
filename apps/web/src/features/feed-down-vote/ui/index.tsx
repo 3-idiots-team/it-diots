@@ -3,9 +3,7 @@
 import { MouseEvent, useOptimistic, useTransition } from 'react';
 
 import { cn } from '@it-diots/shared/lib/utils';
-import { Button, ButtonProps } from '@it-diots/shared/ui';
-
-import { ArrowBigDown } from 'lucide-react';
+import { Button, ButtonProps, Icon } from '@it-diots/shared/ui';
 
 import { upvoteFeed } from '@/shared/actions/feed';
 
@@ -64,7 +62,8 @@ export function FeedDownvoteButton({
       onClick={handleDownvote}
       {...props}
     >
-      <ArrowBigDown
+      <Icon
+        name="ArrowBigDown"
         className={cn('w-5 h-5', {
           'text-red-500': optimisticHasDownvoted,
         })}

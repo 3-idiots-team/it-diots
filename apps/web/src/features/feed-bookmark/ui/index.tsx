@@ -3,9 +3,7 @@
 import { MouseEvent, useOptimistic, useTransition } from 'react';
 
 import { cn } from '@it-diots/shared/lib/utils';
-import { Button, ButtonProps } from '@it-diots/shared/ui';
-
-import { BookMarkedIcon, BookmarkIcon } from 'lucide-react';
+import { Button, ButtonProps, Icon } from '@it-diots/shared/ui';
 
 import { toggleBookmarkFeed } from '@/shared/actions/feed';
 
@@ -59,9 +57,9 @@ export function FeedBookmarkButton({
       {...props}
     >
       {optimisticHasBookmarked ? (
-        <BookMarkedIcon className="w-5 h-5" />
+        <Icon name="BookMarked" className="w-5 h-5" />
       ) : (
-        <BookmarkIcon className="w-5 h-5" />
+        <Icon name="Bookmark" className="w-5 h-5" />
       )}
     </Button>
   );
