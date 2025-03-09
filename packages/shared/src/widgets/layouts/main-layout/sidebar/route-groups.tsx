@@ -21,12 +21,9 @@ export const RouteGroups = () => {
       <SidebarGroupLabel>{label}</SidebarGroupLabel>
       <SidebarGroupContent>
         <SidebarMenu>
-          {routes.map(({ text, icon: Icon, url, matcher }) => (
+          {routes.map(({ text, icon: Icon, url }) => (
             <SidebarMenuItem key={text}>
-              <SidebarMenuButton
-                isActive={matcher?.(pathname) ?? pathname === url}
-                onClick={() => push(url)}
-              >
+              <SidebarMenuButton isActive={pathname === url} onClick={() => push(url)}>
                 <Icon className="h-4 w-4 mr-3 flex-shrink-0" />
                 {text}
               </SidebarMenuButton>
