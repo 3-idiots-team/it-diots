@@ -14,7 +14,6 @@ interface SidebarRoute {
   text: string;
   url: PageRoutes[keyof PageRoutes];
   icon: LucideIcon;
-  matcher?: (pathname: string) => boolean;
 }
 
 interface SidebarRouteGroup {
