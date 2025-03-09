@@ -51,7 +51,7 @@ export const SidebarUser = () => {
             className="w-[--radix-dropdown-menu-trigger-width] min-w-56 rounded-lg"
             side={isMobile ? 'bottom' : 'right'}
             align="end"
-            sideOffset={4}
+            sideOffset={12}
           >
             <DropdownMenuItem>
               <LogOut />

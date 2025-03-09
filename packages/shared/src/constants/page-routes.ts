@@ -14,6 +14,7 @@ interface SidebarRoute {
   text: string;
   url: PageRoutes[keyof PageRoutes];
   icon: LucideIcon;
+  matcher?: (pathname: string) => boolean;
 }
 
 interface SidebarRouteGroup {
@@ -58,3 +59,7 @@ export const SIDEBAR_ROUTE_GROUPS: SidebarRouteGroup[] = [
     ],
   },
 ];
+
+export const BREADCRUMB_ROUTES = SIDEBAR_ROUTE_GROUPS.flatMap(({ label, routes }) =>
+  routes.map((route) => ({ group: label, ...route }))
+);
