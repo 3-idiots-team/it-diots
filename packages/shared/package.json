@@ -8,13 +8,13 @@
     "lint:fix": "eslint --fix ."
   },
   "peerDependencies": {
-    "react": "^18"
+    "react": "catalog:"
   },
   "devDependencies": {
     "@it-diots/eslint-config": "workspace:*",
     "@it-diots/typescript-config": "workspace:*",
     "@types/node": "catalog:",
-    "@types/react": "^19.0.10",
+    "@types/react": "catalog:",
     "autoprefixer": "^10",
     "postcss": "^8",
     "postcss-load-config": "^6",
@@ -36,11 +36,11 @@
     "clsx": "^2.1.1",
     "lucide-react": "catalog:",
     "next-themes": "^0.4.4",
-    "react-hook-form": "^7.54.2",
+    "react-hook-form": "catalog:",
     "sonner": "^2.0.1",
     "tailwind-merge": "^2.3.0",
     "tailwindcss-animate": "^1.0.7",
-    "zod": "^3.24.2"
+    "zod": "catalog:"
   },
   "exports": {
     "./globals.css": "./src/globals.css",
