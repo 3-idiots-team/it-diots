@@ -3,7 +3,7 @@ import { Inter } from 'next/font/google';
 import { Toaster } from '@it-diots/shared/ui';
 import { MainLayout } from '@it-diots/shared/widgets/layouts';
 
-import { ThemeProvider } from '../provider/theme-provider';
+import { Providers } from '../provider';
 
 import '@it-diots/shared/globals.css';
 
@@ -12,7 +12,7 @@ import { ModeToggle } from '@/shared/ui';
 
 const inter = Inter({ subsets: ['latin'] });
 
-export function FeedLayout({
+export function RootLayout({
   children,
   modal,
 }: {
@@ -22,7 +22,7 @@ export function FeedLayout({
   return (
     <html lang="ko" suppressHydrationWarning>
       <body className={inter.className}>
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+        <Providers>
           <MainLayout>{children}</MainLayout>
 
           <Toaster {...TOAST_PROPS} />
@@ -30,7 +30,7 @@ export function FeedLayout({
           {modal}
 
           <ModeToggle />
-        </ThemeProvider>
+        </Providers>
       </body>
     </html>
   );
