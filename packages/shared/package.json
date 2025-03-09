@@ -42,7 +42,8 @@
     "sonner": "^2.0.1",
     "tailwind-merge": "^2.3.0",
     "tailwindcss-animate": "^1.0.7",
-    "zod": "catalog:"
+    "zod": "catalog:",
+    "next": "catalog:"
   },
   "exports": {
     "./globals.css": "./src/globals.css",
@@ -53,7 +54,6 @@
       "./src/hooks/*.ts",
       "./src/hooks/*.tsx"
     ],
-    "./components/*": "./src/components/*.tsx",
-    "./widgets/*": "./src/widgets/*.tsx"
+    "./*": "./src/*.tsx"
   }
 }

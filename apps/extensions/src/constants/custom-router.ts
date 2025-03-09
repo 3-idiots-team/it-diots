@@ -2,7 +2,7 @@ import { AppRouterInstance } from 'next/dist/shared/lib/app-router-context.share
 
 declare type Url = string;
 
-export default class CustomRouter implements AppRouterInstance {
+export class CustomRouter implements AppRouterInstance {
   back(): void {
     window.history.back();
   }

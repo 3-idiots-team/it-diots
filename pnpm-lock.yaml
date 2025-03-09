@@ -310,6 +310,9 @@ importers:
       lucide-react:
         specifier: 'catalog:'
         version: 0.294.0(react@19.0.0)
+      next:
+        specifier: 'catalog:'
+        version: 15.1.7(@babel/core@7.26.9)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       next-themes:
         specifier: ^0.4.4
         version: 0.4.4(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
