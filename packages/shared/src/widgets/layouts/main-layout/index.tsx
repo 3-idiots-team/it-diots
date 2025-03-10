@@ -14,6 +14,7 @@ export function MainLayout({
   return (
     <SidebarProvider>
       <Sidebar onSignOut={onSignOut} userInfo={userInfo} />
+
       <SidebarInset>
         <Header />
         {children}
