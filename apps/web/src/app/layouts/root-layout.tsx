@@ -1,7 +1,6 @@
 import { Inter } from 'next/font/google';
 
 import { Toaster } from '@it-diots/shared/ui';
-import { MainLayout } from '@it-diots/shared/widgets/layouts';
 
 import { Providers } from '../provider';
 
@@ -23,7 +22,7 @@ export function RootLayout({
     <html lang="ko" suppressHydrationWarning>
       <body className={inter.className}>
         <Providers>
-          <MainLayout>{children}</MainLayout>
+          {children}
 
           <Toaster {...TOAST_PROPS} />
 
