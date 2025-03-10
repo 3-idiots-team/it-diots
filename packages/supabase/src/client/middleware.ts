@@ -30,15 +30,15 @@ export async function updateSession(request: NextRequest) {
   } = await supabase.auth.getUser();
 
   // Redirect if no user and the path is not auth
-  if (!user && !request.nextUrl.pathname.startsWith('/auth')) {
+  if (!user && !request.nextUrl.pathname.startsWith('/onboarding')) {
     const url = request.nextUrl.clone();
-    url.pathname = '/auth/signin';
+    url.pathname = '/onboarding';
 
     return NextResponse.redirect(url);
   }
 
   // Redirect authenticated users trying to access /auth/* paths
-  if (user && request.nextUrl.pathname.startsWith('/auth')) {
+  if (user && request.nextUrl.pathname.startsWith('/onboarding')) {
     const url = request.nextUrl.clone();
     url.pathname = '/';
 
