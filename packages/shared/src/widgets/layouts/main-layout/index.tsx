@@ -5,7 +5,7 @@ import { SidebarInset, SidebarProvider } from '@it-diots/shared/ui';
 import { Header } from './header';
 import { Sidebar } from './sidebar';
 
-export const MainLayout = ({ children }: PropsWithChildren) => {
+export function MainLayout({ children }: PropsWithChildren) {
   return (
     <SidebarProvider>
       <Sidebar />
@@ -15,4 +15,4 @@ export const MainLayout = ({ children }: PropsWithChildren) => {
       </SidebarInset>
     </SidebarProvider>
   );
-};
+}

@@ -8,7 +8,7 @@ import {
 import { RouteGroups } from './route-groups';
 import { SidebarUser } from './sidebar-user';
 
-export const Sidebar = () => {
+export function Sidebar() {
   return (
     <ShadcnSidebar collapsible="icon">
       <SidebarHeader>
@@ -20,4 +20,4 @@ export const Sidebar = () => {
       <SidebarFooter />
     </ShadcnSidebar>
   );
-};
+}

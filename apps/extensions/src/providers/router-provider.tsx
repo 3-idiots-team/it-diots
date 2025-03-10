@@ -5,7 +5,7 @@ import { PropsWithChildren } from 'react';
 
 const router = new CustomRouter();
 
-export const RouterProvider = ({ children }: PropsWithChildren) => {
+export function RouterProvider({ children }: PropsWithChildren) {
   const pathname = location.pathname;
 
   return (
@@ -13,4 +13,4 @@ export const RouterProvider = ({ children }: PropsWithChildren) => {
       <AppRouterContext value={router}>{children}</AppRouterContext>
     </PathnameContext>
   );
-};
+}
