@@ -1,6 +1,6 @@
 import { Separator } from '@it-diots/shared/ui';
 
-import { AllTags } from '@/widgets/all-tags/ui';
+import { AllTags } from '@/features/all-tags';
 import { TagListForm } from '@/widgets/tag-list-form/ui';
 
 export function TagPage() {
