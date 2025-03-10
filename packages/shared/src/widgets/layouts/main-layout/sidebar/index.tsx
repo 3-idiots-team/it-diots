@@ -15,9 +15,11 @@ export function Sidebar({ onSignOut, userInfo }: { onSignOut: () => void; userIn
       <SidebarHeader>
         <SidebarUser onSignOut={onSignOut} userInfo={userInfo} />
       </SidebarHeader>
+
       <SidebarContent>
         <RouteGroups />
       </SidebarContent>
+
       <SidebarFooter />
     </ShadcnSidebar>
   );
