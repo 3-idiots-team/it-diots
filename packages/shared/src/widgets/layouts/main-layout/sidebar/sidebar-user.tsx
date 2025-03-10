@@ -8,22 +8,23 @@ import {
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
+  Icon,
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
   useSidebar,
 } from '@it-diots/shared/ui';
+import { OAuthUser } from '@it-diots/supabase/types';
 
-import { ChevronsUpDown, LogOut } from 'lucide-react';
+import { ChevronsUpDown } from 'lucide-react';
 
-const user = {
-  thumbnail:
-    'https://images.unsplash.com/photo-1552058544-f2b08422138a?q=80&w=1398&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-  nickname: 'it-diots',
-  email: 'itdiots@gmail.com',
-};
-
-export function SidebarUser() {
+export function SidebarUser({
+  onSignOut,
+  userInfo,
+}: {
+  onSignOut: () => void;
+  userInfo: OAuthUser;
+}) {
   const { isMobile } = useSidebar();
 
   return (
@@ -36,13 +37,19 @@ export function SidebarUser() {
               className="data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground"
             >
               <Avatar className="h-8 w-8 rounded-lg">
-                <AvatarImage className="object-cover" src={user?.thumbnail} alt={user?.nickname} />
-                <AvatarFallback className="rounded-lg">{user?.nickname}</AvatarFallback>
+                <AvatarImage
+                  className="object-cover"
+                  src={userInfo.avatar_url ?? undefined}
+                  alt={userInfo.username ?? undefined}
+                />
+                <AvatarFallback className="rounded-lg">{userInfo.username}</AvatarFallback>
               </Avatar>
+
               <div className="grid flex-1 text-left text-sm leading-tight">
-                <span className="truncate font-semibold">{user?.nickname}</span>
-                <span className="truncate text-xs">{user?.email}</span>
+                <span className="truncate font-semibold">{userInfo.username}</span>
+                <span className="truncate text-xs">{userInfo.email}</span>
               </div>
+
               <ChevronsUpDown className="ml-auto size-4" />
             </SidebarMenuButton>
           </DropdownMenuTrigger>
@@ -53,9 +60,8 @@ export function SidebarUser() {
             align="end"
             sideOffset={12}
           >
-            <DropdownMenuItem>
-              <LogOut />
-              로그아웃
+            <DropdownMenuItem onClick={onSignOut}>
+              <Icon name={'LogOut'} /> 로그아웃
             </DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>

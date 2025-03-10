@@ -13,6 +13,7 @@
   "devDependencies": {
     "@it-diots/eslint-config": "workspace:*",
     "@it-diots/typescript-config": "workspace:*",
+    "@it-diots/supabase": "workspace:*",
     "@types/node": "catalog:",
     "@types/react": "catalog:",
     "autoprefixer": "^10",

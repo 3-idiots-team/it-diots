@@ -1,2 +1,5 @@
-/** 추후 Supabase의 OAuth 기능 추가시 사용  */
+import { Database } from './supabase';
+
 export { type Provider } from '@supabase/supabase-js';
+
+export type OAuthUser = Database['public']['Tables']['users']['Row'];
