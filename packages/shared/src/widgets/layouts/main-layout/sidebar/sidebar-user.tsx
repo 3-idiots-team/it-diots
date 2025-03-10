@@ -23,7 +23,7 @@ const user = {
   email: 'itdiots@gmail.com',
 };
 
-export const SidebarUser = () => {
+export function SidebarUser() {
   const { isMobile } = useSidebar();
 
   return (
@@ -62,4 +62,4 @@ export const SidebarUser = () => {
       </SidebarMenuItem>
     </SidebarMenu>
   );
-};
+}

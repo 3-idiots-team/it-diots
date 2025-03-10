@@ -13,7 +13,7 @@ import {
   SidebarTrigger,
 } from '@it-diots/shared/ui';
 
-export const Header = () => {
+export function Header() {
   const pathname = usePathname();
 
   const currentBreadcrumb = BREADCRUMB_ROUTES.find(({ url }) => url === pathname);
@@ -35,4 +35,4 @@ export const Header = () => {
       </Breadcrumb>
     </header>
   );
-};
+}

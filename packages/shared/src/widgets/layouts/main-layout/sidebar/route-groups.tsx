@@ -12,7 +12,7 @@ import {
   SidebarMenuItem,
 } from '@it-diots/shared/ui';
 
-export const RouteGroups = () => {
+export function RouteGroups() {
   const { push } = useRouter();
   const pathname = usePathname();
 
@@ -33,4 +33,4 @@ export const RouteGroups = () => {
       </SidebarGroupContent>
     </SidebarGroup>
   ));
-};
+}
