@@ -7,7 +7,6 @@ import { Providers } from '../provider';
 import '@it-diots/shared/globals.css';
 
 import { TOAST_PROPS } from '@/shared/constants';
-import { ModeToggle } from '@/shared/ui';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -27,8 +26,6 @@ export function RootLayout({
           <Toaster {...TOAST_PROPS} />
 
           {modal}
-
-          <ModeToggle />
         </Providers>
       </body>
     </html>
