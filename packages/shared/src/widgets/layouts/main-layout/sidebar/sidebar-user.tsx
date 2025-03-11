@@ -18,13 +18,12 @@ import { OAuthUser } from '@it-diots/supabase/types';
 
 import { ChevronsUpDown } from 'lucide-react';
 
-export function SidebarUser({
-  onSignOut,
-  userInfo,
-}: {
+interface SidebarUserProps {
   onSignOut: () => void;
   userInfo: OAuthUser;
-}) {
+}
+
+export function SidebarUser({ onSignOut, userInfo }: SidebarUserProps) {
   const { isMobile } = useSidebar();
 
   return (
