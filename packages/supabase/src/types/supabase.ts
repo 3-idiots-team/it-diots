@@ -81,6 +81,36 @@ export type Database = {
           },
         ];
       };
+      feed_tags: {
+        Row: {
+          feed_id: number;
+          tag_id: number;
+        };
+        Insert: {
+          feed_id: number;
+          tag_id: number;
+        };
+        Update: {
+          feed_id?: number;
+          tag_id?: number;
+        };
+        Relationships: [
+          {
+            foreignKeyName: 'feed_tags_feed_id_fkey';
+            columns: ['feed_id'];
+            isOneToOne: false;
+            referencedRelation: 'feeds';
+            referencedColumns: ['id'];
+          },
+          {
+            foreignKeyName: 'feed_tags_tag_id_fkey';
+            columns: ['tag_id'];
+            isOneToOne: false;
+            referencedRelation: 'tags';
+            referencedColumns: ['id'];
+          },
+        ];
+      };
       feeds: {
         Row: {
           created_at: string | null;
@@ -133,6 +163,24 @@ export type Database = {
             referencedColumns: ['id'];
           },
         ];
+      };
+      tags: {
+        Row: {
+          created_at: string | null;
+          id: number;
+          name: string;
+        };
+        Insert: {
+          created_at?: string | null;
+          id?: never;
+          name: string;
+        };
+        Update: {
+          created_at?: string | null;
+          id?: never;
+          name?: string;
+        };
+        Relationships: [];
       };
       users: {
         Row: {
