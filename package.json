@@ -12,6 +12,7 @@
     "web": "pnpm --filter @it-diots/web",
     "ext": "pnpm --filter @it-diots/extensions",
     "ui": "pnpm --filter @it-diots/shared ui",
+    "supabase": "pnpm --filter @it-diots/supabase",
     "lint": "turbo lint",
     "lint:fix": "turbo lint:fix",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
