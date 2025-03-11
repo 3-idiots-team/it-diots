@@ -9,7 +9,12 @@ import { OAuthUser } from '@it-diots/supabase/types';
 import { RouteGroups } from './route-groups';
 import { SidebarUser } from './sidebar-user';
 
-export function Sidebar({ onSignOut, userInfo }: { onSignOut: () => void; userInfo: OAuthUser }) {
+interface SidebarProps {
+  onSignOut: () => void;
+  userInfo: OAuthUser;
+}
+
+export function Sidebar({ onSignOut, userInfo }: SidebarProps) {
   return (
     <ShadcnSidebar collapsible="icon">
       <SidebarHeader>
