@@ -20,7 +20,7 @@ export function FeedCopyLinkButton({ feedId, ...props }: FeedCopyLinkButtonProps
 
   return (
     <Button size="icon" type="button" variant="ghost" onClick={handleCopyLink} {...props}>
-      <Icon name="Link" className="w-5 h-5" />
+      <Icon name="Link" className="w-4 h-4" />
     </Button>
   );
 }
