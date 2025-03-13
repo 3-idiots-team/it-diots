@@ -67,7 +67,15 @@ export function FeedList() {
                   Shadcn, 생산적으로 일하기 위한 필수 도구
                 </CardTitle>
 
-                <div className="flex items-center gap-1.5 -ml-0.5">
+                <p className="text-xs text-muted-foreground tracking-tight">
+                  {new Date().toLocaleDateString('ko-KR', {
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric',
+                  })}
+                </p>
+
+                <div className="flex items-center gap-1.5 -ml-1 py-1">
                   {visibleTags.map((tag) => (
                     <Badge key={tag} variant="secondary">
                       #{tag}
@@ -76,14 +84,6 @@ export function FeedList() {
 
                   <Badge variant="secondary">+{MOCK_TAGS.length - visibleTags.length}</Badge>
                 </div>
-
-                <p className="text-xs text-muted-foreground tracking-tight">
-                  {new Date().toLocaleDateString('ko-KR', {
-                    year: 'numeric',
-                    month: 'long',
-                    day: 'numeric',
-                  })}
-                </p>
               </CardContent>
 
               <AspectRatio ratio={2 / 1}>
