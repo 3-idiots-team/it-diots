@@ -74,24 +74,17 @@ export function FeedUpvoteButton({
       disabled={isPending}
       className={cn(
         className,
-        'group flex gap-1 hover:bg-green-100 hover:text-green-500 transition-all duration-300 min-w-[58px]',
+        'group flex gap-1.5 hover:bg-green-100 hover:text-green-800 transition-all duration-300 min-w-[58px] dark:hover:bg-green-800 dark:hover:text-green-100',
         {
-          'bg-green-100': optimisticHasUpvoted,
+          'rounded-none': hasUpvoted,
+          'bg-green-100 text-green-800 dark:bg-green-800 dark:text-green-100': optimisticHasUpvoted,
         }
       )}
       onClick={handleUpvote}
       {...props}
     >
-      <Icon
-        name="ArrowBigUp"
-        className={cn('w-5 h-5', {
-          'text-green-500': optimisticHasUpvoted,
-        })}
-      />
-
-      <span className={cn({ 'text-green-500': optimisticHasUpvoted })}>
-        {optimisticUpvoteCount}
-      </span>
+      <Icon name="ThumbsUp" className={cn('w-4 h-4')} />
+      <span>{optimisticUpvoteCount}</span>
     </Button>
   );
 }
