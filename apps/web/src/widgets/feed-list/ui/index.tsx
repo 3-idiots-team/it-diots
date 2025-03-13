@@ -14,6 +14,10 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
 } from '@it-diots/shared/ui';
 
 import { FeedBookmarkButton } from '@/features/feed-bookmark';
@@ -45,21 +49,21 @@ export function FeedList() {
               onClick={() => push(`/feed/${value}`)}
             >
               <CardHeader>
-                <div className="flex items-center gap-3">
-                  <Avatar className="h-8 w-8 rounded-full">
-                    <AvatarImage
-                      className="object-cover"
-                      src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dXNlcnxlbnwwfHwwfHx8MA%3D%3D"
-                      alt="user image"
-                    />
-                    <AvatarFallback className="rounded-lg">USER</AvatarFallback>
-                  </Avatar>
-
-                  <div className="grid flex-1 text-left text-sm leading-tight">
-                    <span className="truncate text-sm font-semibold">{'unknown'}</span>
-                    <span className="truncate text-xs text-zinc-400">{'unknown@gmail.com'}</span>
-                  </div>
-                </div>
+                <TooltipProvider>
+                  <Tooltip>
+                    <TooltipTrigger className="w-fit">
+                      <Avatar className="h-8 w-8 rounded-full">
+                        <AvatarImage
+                          className="object-cover"
+                          src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dXNlcnxlbnwwfHwwfHx8MA%3D%3D"
+                          alt="user image"
+                        />
+                        <AvatarFallback className="rounded-lg">USER</AvatarFallback>
+                      </Avatar>
+                    </TooltipTrigger>
+                    <TooltipContent>{'IT Idiots'}</TooltipContent>
+                  </Tooltip>
+                </TooltipProvider>
               </CardHeader>
 
               <CardContent className="flex flex-col gap-3">
