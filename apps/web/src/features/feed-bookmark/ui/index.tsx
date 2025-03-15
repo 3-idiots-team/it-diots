@@ -56,11 +56,7 @@ export function FeedBookmarkButton({
       onClick={handleBookmarkToggle}
       {...props}
     >
-      {optimisticHasBookmarked ? (
-        <Icon name="BookMarked" className="w-5 h-5" />
-      ) : (
-        <Icon name="Bookmark" className="w-5 h-5" />
-      )}
+      <Icon name={optimisticHasBookmarked ? 'BookMarked' : 'Bookmark'} className="w-4 h-4" />
     </Button>
   );
 }

@@ -11,10 +11,10 @@ export function FeedComment({ className, commentCount = 0, ...props }: FeedComme
       size="sm"
       type="button"
       variant="ghost"
-      className={cn(className, 'flex gap-1')}
+      className={cn(className, 'flex gap-1.5 items-center')}
       {...props}
     >
-      <Icon name="MessageSquare" className={cn('w-5 h-5')} />
+      <Icon name="MessageSquare" className={cn('w-4 h-4')} />
 
       {commentCount && <span className="text-sm">{commentCount}</span>}
     </Button>

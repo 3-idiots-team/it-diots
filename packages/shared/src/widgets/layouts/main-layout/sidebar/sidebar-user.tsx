@@ -45,7 +45,7 @@ export function SidebarUser({ onSignOut, userInfo }: SidebarUserProps) {
               </Avatar>
 
               <div className="grid flex-1 text-left text-sm leading-tight">
-                <span className="truncate font-semibold">{userInfo.username}</span>
+                <span className="truncate text-sm font-semibold">{userInfo.username}</span>
                 <span className="truncate text-xs">{userInfo.email}</span>
               </div>
 
