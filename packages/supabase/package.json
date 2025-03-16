@@ -19,21 +19,9 @@
     "supabase": "^2.12.1"
   },
   "exports": {
-    "./client": {
-      "types": "./src/client/client.ts",
-      "default": "./src/client/client.ts"
-    },
-    "./middleware": {
-      "types": "./src/client/middleware.ts",
-      "default": "./src/client/middleware.ts"
-    },
-    "./server": {
-      "types": "./src/client/server.ts",
-      "default": "./src/client/server.ts"
-    },
-    "./types": {
-      "types": "./src/types/index.ts",
-      "default": "./src/types/index.ts"
-    }
+    "./client": "./src/client/client.ts",
+    "./middleware": "./src/client/middleware.ts",
+    "./server": "./src/client/server.ts",
+    "./types": "./src/types/index.ts"
   }
 }
