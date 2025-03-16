@@ -1,1 +1,1 @@
-export type ProfileTab = 'ReadMe' | 'Posts' | 'Replies' | 'Upvoted';
+export type ProfileTab = 'Readme' | 'Posts' | 'Replies' | 'Upvoted';
