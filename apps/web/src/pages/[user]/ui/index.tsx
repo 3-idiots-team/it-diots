@@ -1,6 +1,5 @@
-'use client';
-
 import { UserActivity } from '@/widgets/user-activity';
+import { UserProfile } from '@/widgets/user-profile';
 
 export function ProfilePage() {
   return (
@@ -9,7 +8,9 @@ export function ProfilePage() {
         <UserActivity userName="chiho" />
       </div>
 
-      <div className="w-[340px] h-full border-r p-4">PROFILE</div>
+      <div className="w-[340px] h-full border-r p-4">
+        <UserProfile />
+      </div>
     </div>
   );
 }
