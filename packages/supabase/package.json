@@ -20,20 +20,20 @@
   },
   "exports": {
     "./client": {
-      "types": "./dist/client/client.d.ts",
-      "default": "./dist/client/client.js"
+      "types": "./src/client/client.ts",
+      "default": "./src/client/client.ts"
     },
     "./middleware": {
-      "types": "./dist/client/middleware.d.ts",
-      "default": "./dist/client/middleware.js"
+      "types": "./src/client/middleware.ts",
+      "default": "./src/client/middleware.ts"
     },
     "./server": {
-      "types": "./dist/client/server.d.ts",
-      "default": "./dist/client/server.js"
+      "types": "./src/client/server.ts",
+      "default": "./src/client/server.ts"
     },
     "./types": {
-      "types": "./dist/types/index.d.ts",
-      "default": "./dist/types/index.js"
+      "types": "./src/types/index.ts",
+      "default": "./src/types/index.ts"
     }
   }
 }
