@@ -1,4 +1,4 @@
-import { FeedCreateForm } from '@/widgets/feed-create';
+import { FeedCreateForm } from '@/features/feed-create';
 
 export function FeedCreatePage() {
   return (
