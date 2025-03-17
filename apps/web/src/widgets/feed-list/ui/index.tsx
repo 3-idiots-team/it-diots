@@ -25,13 +25,20 @@ import { FeedComment } from '@/features/feed-comment/ui';
 import { FeedCopyLinkButton } from '@/features/feed-copy-link';
 import { FeedDownvoteButton } from '@/features/feed-down-vote';
 import { FeedUpvoteButton } from '@/features/feed-upvote';
+import { Feed } from '@/shared/types';
 
 const MOCK_TAGS = ['webdev', 'it', 'design'];
 
-export function FeedList() {
+interface FeedListProps {
+  feedList: Feed[];
+}
+
+export function FeedList({ feedList }: FeedListProps) {
   const { push } = useRouter();
 
   const visibleTags = MOCK_TAGS.slice(0, 2);
+
+  console.log(feedList);
 
   return (
     <div className="grid grid-cols-1 gap-8 md:gap-4 lg:grid-cols-[repeat(auto-fill,_minmax(300px,_1fr))]">

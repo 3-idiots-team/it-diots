@@ -2,10 +2,17 @@ import { Suspense } from 'react';
 
 import { FeedCreateModalTrigger } from './feed-create-modal-trigger';
 
+import { getFeed } from '@/shared/actions';
 import { PageLoading } from '@/shared/ui/page-loading';
-import { FeedList } from '@/widgets/feed-list';
+import { FeedList as FeedListComponent } from '@/widgets/feed-list';
 
-export function FeedPage() {
+async function FeedList() {
+  const feedList = await getFeed();
+
+  return <FeedListComponent feedList={feedList} />;
+}
+
+export async function FeedPage() {
   return (
     <div className="p-4 w-full">
       <div className="flex flex-col gap-4">
