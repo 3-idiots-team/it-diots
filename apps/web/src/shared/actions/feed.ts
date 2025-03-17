@@ -1,9 +1,36 @@
 'use server';
 
-export async function getFeed() {
-  const response = await fetch('https://jsonplaceholder.typicode.com/posts');
-  const data = await response.json();
-  return data;
+import { createClient } from '@it-diots/supabase/server';
+
+import { Feed } from '@/shared/types';
+
+export async function getFeed(): Promise<Feed[]> {
+  const supabase = await createClient();
+
+  const { data }: { data: Feed[] | null } = await supabase.from('feeds').select(
+    `
+    id,
+    title,
+    description,
+    origin_url,
+    og_image_url,
+    og_url,
+    views,
+    upvotes,
+    downvotes,
+    created_at,
+    updated_at,
+    user_id,
+    users (
+      id,
+      username,
+      avatar_url,
+      email
+    )
+  `
+  );
+
+  return data || [];
 }
 
 export async function toggleBookmarkFeed(id: number) {
