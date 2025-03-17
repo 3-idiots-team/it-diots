@@ -4,7 +4,7 @@ import { useRouter } from 'next/navigation';
 
 import { Button, Icon } from '@it-diots/shared/ui';
 
-export function FeedCreateDisplayButton() {
+export function FeedCreateModalTrigger() {
   const { push: routerPush } = useRouter();
 
   return (
