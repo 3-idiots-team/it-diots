@@ -1,0 +1,1 @@
+export { AllFeedPage } from './ui';
