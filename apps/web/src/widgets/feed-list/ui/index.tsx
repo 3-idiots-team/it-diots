@@ -36,6 +36,8 @@ interface FeedListProps {
 export function FeedList({ feedList }: FeedListProps) {
   const { push } = useRouter();
 
+  console.log(feedList);
+
   const visibleTags = MOCK_TAGS.slice(0, 2);
 
   console.log(feedList);
