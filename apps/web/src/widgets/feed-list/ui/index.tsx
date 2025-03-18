@@ -40,8 +40,6 @@ export function FeedList({ feedList }: FeedListProps) {
 
   const visibleTags = MOCK_TAGS.slice(0, 2);
 
-  console.log(feedList);
-
   return (
     <div className="grid grid-cols-1 gap-8 md:gap-4 lg:grid-cols-[repeat(auto-fill,_minmax(300px,_1fr))]">
       {[1, 2, 3].map((value) => {
