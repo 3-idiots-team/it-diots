@@ -20,7 +20,7 @@ interface HeaderUserProps {
 export function HeaderUser({ onSignOut, userInfo }: HeaderUserProps) {
   return (
     <DropdownMenu>
-      <DropdownMenuTrigger className="rounded-full border border-border">
+      <DropdownMenuTrigger className="border-border rounded-full border">
         <Avatar className="h-10 w-10 rounded-full">
           <AvatarImage
             className="object-cover"
