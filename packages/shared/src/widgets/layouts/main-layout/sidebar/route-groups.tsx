@@ -24,7 +24,7 @@ export function RouteGroups() {
           {routes.map(({ text, icon: Icon, url }) => (
             <SidebarMenuItem key={text}>
               <SidebarMenuButton isActive={pathname === url} onClick={() => push(url)}>
-                <Icon className="h-4 w-4 mr-3 flex-shrink-0" />
+                <Icon className="mr-3 h-4 w-4 flex-shrink-0" />
                 {text}
               </SidebarMenuButton>
             </SidebarMenuItem>
