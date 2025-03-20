@@ -14,10 +14,10 @@ interface MainLayoutProps extends PropsWithChildren {
 export function MainLayout({ children, onSignOut, userInfo }: MainLayoutProps) {
   return (
     <SidebarProvider>
-      <Sidebar onSignOut={onSignOut} userInfo={userInfo} />
+      <Sidebar />
 
       <SidebarInset>
-        <Header />
+        <Header onSignOut={onSignOut} userInfo={userInfo} />
         {children}
       </SidebarInset>
     </SidebarProvider>

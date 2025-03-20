@@ -4,7 +4,6 @@ import { MainLayout } from '@it-diots/shared/widgets/layouts';
 
 import { signOut } from '@/shared/actions';
 import { getUser } from '@/shared/actions/auth';
-import { ModeToggle } from '@/shared/ui';
 
 export async function AuthLayout({ children }: PropsWithChildren) {
   const userInfo = await getUser();
@@ -12,8 +11,6 @@ export async function AuthLayout({ children }: PropsWithChildren) {
   return (
     <MainLayout onSignOut={signOut} userInfo={userInfo}>
       {children}
-
-      <ModeToggle />
     </MainLayout>
   );
 }
