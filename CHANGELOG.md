@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.1.1](https://github.com/3-idiots-team/it-diots/compare/v1.1.0...v1.1.1) (2025-03-21)
+
+
+### Other Changes
+
+* classname 정렬 적용 ([f28f743](https://github.com/3-idiots-team/it-diots/commit/f28f743136cf19094dfb8b0e0f1dd9074adc671e))
+* tailwindcss 클래스명 자동 정렬 plugin 추가 ([3a06714](https://github.com/3-idiots-team/it-diots/commit/3a0671479be5d126d615325f6d95a31bab6ca9d3))
+
+
+### Styles
+
+* main layout 스타일링 변경 ([9a23bd5](https://github.com/3-idiots-team/it-diots/commit/9a23bd512eefe622abe726b7a377979e49bbf9bb))
+
 ## [1.1.0](https://github.com/3-idiots-team/it-diots/compare/v1.0.0...v1.1.0) (2025-03-18)
 
 
