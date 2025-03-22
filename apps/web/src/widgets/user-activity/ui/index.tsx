@@ -32,7 +32,7 @@ export function UserActivity({ userName }: { userName: string }) {
               {tab}
             </Button>
             {checkActiveTab(tab) && (
-              <div className="absolute bottom-0 w-4 h-0.5 bg-primary rounded-full" />
+              <div className="bg-primary absolute bottom-0 h-0.5 w-4 rounded-full" />
             )}
           </div>
         ))}
