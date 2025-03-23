@@ -4,7 +4,7 @@ import { Avatar, AvatarImage, Button } from '@it-diots/shared/ui';
 
 import { UserMetric } from './user-metric';
 
-import { LinkCopyButton } from '@/features/link-copy-button/ui';
+import { LinkCopyButton } from '@/features/[userId]/link-copy-button/ui';
 
 export function UserProfile() {
   return (

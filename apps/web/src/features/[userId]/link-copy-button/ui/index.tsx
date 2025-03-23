@@ -13,11 +13,11 @@ export function LinkCopyButton({ link, ...props }: LinkCopyButtonProps) {
   };
 
   return (
-    <div className="rounded-md border px-2 py-2 font-mono text-sm shadow-sm flex items-center justify-between mt-4">
+    <div className="mt-4 flex items-center justify-between rounded-md border px-2 py-2 font-mono text-sm shadow-sm">
       <p className="text-gray-600">{link}</p>
 
-      <Button className="h-full h-8" onClick={handleCopyInviteLink} {...props}>
-        <Icon name="Copy" className="w-4 h-4" />
+      <Button className="h-8 h-full" onClick={handleCopyInviteLink} {...props}>
+        <Icon name="Copy" className="h-4 w-4" />
       </Button>
     </div>
   );
