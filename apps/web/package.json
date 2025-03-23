@@ -13,6 +13,7 @@
     "@hookform/resolvers": "^4.1.1",
     "@it-diots/shared": "workspace:*",
     "@it-diots/supabase": "workspace:*",
+    "date-fns": "^4.1.0",
     "lucide-react": "catalog:",
     "next": "catalog:",
     "next-themes": "^0.4.4",

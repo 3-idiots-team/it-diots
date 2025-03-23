@@ -9,6 +9,7 @@ interface LucideIconProps extends HTMLAttributes<SVGElement> {
   color?: string;
   size?: 'sm' | 'md' | 'lg';
   strokeWidth?: number;
+  fill?: string;
 }
 
 const ICON_SIZE = {
@@ -17,7 +18,14 @@ const ICON_SIZE = {
   lg: 28,
 };
 
-function Icon({ name, color, size = 'md', strokeWidth = 2, ...props }: LucideIconProps) {
+function Icon({
+  name,
+  color,
+  size = 'md',
+  strokeWidth = 2,
+  fill = 'none',
+  ...props
+}: LucideIconProps) {
   const SelectedLucideIcon = icons[name];
   const hasClickEvent = Boolean(props.onClick);
 
@@ -29,6 +37,7 @@ function Icon({ name, color, size = 'md', strokeWidth = 2, ...props }: LucideIco
       size={ICON_SIZE[size]}
       strokeWidth={strokeWidth}
       className={cn(pointerStyle, props.className)}
+      fill={fill}
       {...props}
     />
   );
