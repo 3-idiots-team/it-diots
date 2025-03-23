@@ -8,7 +8,7 @@ import { LinkCopyButton } from '@/features/link-copy-button/ui';
 
 export function UserProfile() {
   return (
-    <div className="w-full flex flex-col gap-8">
+    <div className="flex w-full flex-col gap-8">
       <section className="flex items-center justify-between">
         <p className="text-xl font-bold">Profile</p>
 
@@ -17,8 +17,8 @@ export function UserProfile() {
         </Button>
       </section>
 
-      <section className="rounded-3xl h-24 bg-sky-50">
-        <Avatar className="w-24 h-24 rounded-3xl">
+      <section className="h-24 rounded-3xl bg-sky-50">
+        <Avatar className="h-24 w-24 rounded-3xl">
           <AvatarImage src="https://github.com/shadcn.png" />
         </Avatar>
       </section>
@@ -52,7 +52,7 @@ export function UserProfile() {
       <section>
         <p className="text-2xl font-bold">친구 초대하기</p>
 
-        <p className="text-gray-600 mt-2">
+        <p className="mt-2 text-gray-600">
           it-diots와 함께 개발 트렌드를 파악할 수 있도록, 링크를 공유하여 친구들을 초대하세요!
         </p>
 

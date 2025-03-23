@@ -4,6 +4,11 @@ import { useRouter, useSearchParams } from 'next/navigation';
 
 import { Button } from '@it-diots/shared/ui';
 
+import { Posts } from './posts';
+import { ReadMe } from './read-me';
+import { Replies } from './replies';
+import { Upvoted } from './upvoted';
+
 import { ProfileTab } from '@/shared/types';
 
 const TAB_LIST: ProfileTab[] = ['Readme', 'Posts', 'Replies', 'Upvoted'];
@@ -31,6 +36,7 @@ export function UserActivity({ userName }: { userName: string }) {
             <Button variant="ghost" size="lg" onClick={() => handleTabChange(tab)}>
               {tab}
             </Button>
+
             {checkActiveTab(tab) && (
               <div className="bg-primary absolute bottom-0 h-0.5 w-4 rounded-full" />
             )}
@@ -38,7 +44,12 @@ export function UserActivity({ userName }: { userName: string }) {
         ))}
       </div>
 
-      <main className="p-4">Main</main>
+      <main className="p-4">
+        {tabParam === 'readMe' && <ReadMe />}
+        {tabParam === 'posts' && <Posts />}
+        {tabParam === 'replies' && <Replies />}
+        {tabParam === 'upvoted' && <Upvoted />}
+      </main>
     </div>
   );
 }
