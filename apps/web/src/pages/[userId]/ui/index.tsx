@@ -1,5 +1,5 @@
-import { UserActivity } from '@/widgets/user-activity';
-import { UserProfile } from '@/widgets/user-profile';
+import { UserActivity } from '@/widgets/[userId]/user-activity';
+import { UserProfile } from '@/widgets/[userId]/user-profile';
 
 export function ProfilePage() {
   return (

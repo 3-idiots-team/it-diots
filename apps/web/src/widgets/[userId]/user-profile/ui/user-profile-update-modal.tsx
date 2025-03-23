@@ -2,7 +2,7 @@ import { Dialog, DialogClose, DialogContent, DialogHeader, DialogTitle } from '@
 
 export function UserProfileUpdateModal({ onClose }: { onClose: () => void }) {
   return (
-    <Dialog defaultOpen onOpenChange={onClose} className="bg-none">
+    <Dialog defaultOpen onOpenChange={onClose}>
       <DialogContent className="bg-none">
         <DialogClose onClick={onClose} />
 
