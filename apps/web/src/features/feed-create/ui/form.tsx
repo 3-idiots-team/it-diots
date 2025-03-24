@@ -4,22 +4,23 @@ import {
   Button,
   Form,
   FormControl,
-  FormDescription,
   FormField,
   FormItem,
   FormLabel,
-  FormMessage,
-  Input,
+  Textarea,
 } from '@it-diots/shared/ui';
 
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
 
+import { OGDataInput } from './og-data-input';
+import { TagInput } from './tag-input';
+
 import { zodResolver } from '@hookform/resolvers/zod';
 
 const formSchema = z.object({
-  username: z.string().min(2, {
-    message: 'Username must be at least 2 characters.',
+  username: z.string().min(1, {
+    message: 'Username is required',
   }),
 });
 
@@ -37,21 +38,49 @@ export function FeedCreateForm() {
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
+      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
         <FormField
           control={form.control}
           name="username"
-          render={({ field }) => (
+          render={() => (
             <FormItem>
-              <FormLabel>Username</FormLabel>
+              <FormLabel>URL</FormLabel>
+
               <FormControl>
-                <Input placeholder="shadcn" {...field} />
+                <OGDataInput />
               </FormControl>
-              <FormDescription>This is your public display name.</FormDescription>
-              <FormMessage />
             </FormItem>
           )}
         />
+
+        <FormField
+          control={form.control}
+          name="username"
+          render={() => (
+            <FormItem>
+              <FormLabel>Tags</FormLabel>
+
+              <FormControl>
+                <TagInput />
+              </FormControl>
+            </FormItem>
+          )}
+        />
+
+        <FormField
+          control={form.control}
+          name="username"
+          render={() => (
+            <FormItem>
+              <FormLabel>Description</FormLabel>
+
+              <FormControl>
+                <Textarea />
+              </FormControl>
+            </FormItem>
+          )}
+        />
+
         <Button type="submit">Submit</Button>
       </form>
     </Form>
