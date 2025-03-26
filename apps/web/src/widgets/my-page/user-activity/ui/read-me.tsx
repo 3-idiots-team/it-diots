@@ -1,7 +1,7 @@
 import { Icon } from '@it-diots/shared/ui';
 
-import { ActivityHeatmap } from '@/features/mypage/activity-heatmap';
-import { EditReadme } from '@/features/mypage/edit-readme';
+import { ActivityHeatmap } from '@/features/my-page/activity-heatmap';
+import { EditReadme } from '@/features/my-page/edit-readme';
 
 export function ReadMe() {
   return (
