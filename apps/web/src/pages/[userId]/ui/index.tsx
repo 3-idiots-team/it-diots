@@ -1,7 +1,7 @@
-import { UserActivity } from '@/widgets/[userId]/user-activity';
-import { UserProfile } from '@/widgets/[userId]/user-profile';
+import { UserActivity } from '@/widgets/my-page/user-activity';
+import { UserProfile } from '@/widgets/my-page/user-profile';
 
-export function ProfilePage() {
+export function MyPage() {
   return (
     <div className="flex h-full justify-center">
       <div className="h-full w-[678px] border-l border-r">

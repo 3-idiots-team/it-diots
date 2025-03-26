@@ -7,7 +7,7 @@ import { ReadMe } from './read-me';
 import { Replies } from './replies';
 import { Upvoted } from './upvoted';
 
-import { ActivityTab } from '@/features/mypage/activity-tab';
+import { ActivityTab } from '@/features/my-page/activity-tab';
 
 export function UserActivity() {
   const params = useParams<{ userId: string }>();
