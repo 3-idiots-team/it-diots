@@ -7,7 +7,7 @@ import { ReadMe } from './read-me';
 import { Replies } from './replies';
 import { Upvoted } from './upvoted';
 
-import { ActivityTab } from '@/features/[userId]/activity-tab';
+import { ActivityTab } from '@/features/mypage/activity-tab';
 
 export function UserActivity() {
   const params = useParams<{ userId: string }>();
@@ -19,10 +19,20 @@ export function UserActivity() {
       <ActivityTab userId={params?.userId} />
 
       <main className="p-4">
-        {tabParam === 'readMe' && <ReadMe />}
-        {tabParam === 'posts' && <Posts />}
-        {tabParam === 'replies' && <Replies />}
-        {tabParam === 'upvoted' && <Upvoted />}
+        {(() => {
+          switch (tabParam) {
+            case 'readMe':
+              return <ReadMe />;
+            case 'posts':
+              return <Posts />;
+            case 'replies':
+              return <Replies />;
+            case 'upvoted':
+              return <Upvoted />;
+            default:
+              return null;
+          }
+        })()}
       </main>
     </div>
   );
