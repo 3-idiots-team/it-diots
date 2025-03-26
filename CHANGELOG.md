@@ -1,5 +1,35 @@
 # Changelog
 
+## [1.2.0](https://github.com/3-idiots-team/it-diots/compare/v1.1.0...v1.2.0) (2025-03-26)
+
+
+### Other Changes
+
+* classname 정렬 적용 ([f28f743](https://github.com/3-idiots-team/it-diots/commit/f28f743136cf19094dfb8b0e0f1dd9074adc671e))
+* tailwindcss 클래스명 자동 정렬 plugin 추가 ([3a06714](https://github.com/3-idiots-team/it-diots/commit/3a0671479be5d126d615325f6d95a31bab6ca9d3))
+* 유저 페이지 &gt; 사이드바 완성 ([f2b3a22](https://github.com/3-idiots-team/it-diots/commit/f2b3a22237aeeb560173530b4b5630b7465dbe1c))
+
+
+### Features
+
+* heatmap 컴포넌트 구현 ([213ce27](https://github.com/3-idiots-team/it-diots/commit/213ce27930761c112b253c5e83e5f5273cf89bea))
+* userId로 모듈 세분화 ([0c776cd](https://github.com/3-idiots-team/it-diots/commit/0c776cdb322f8e860cc25a01d21b59f8811b4138))
+* 기본 구조 정리 ([5e1ec12](https://github.com/3-idiots-team/it-diots/commit/5e1ec12a703ee534496f80c58a8dc68e3ba64997))
+
+
+### Bug Fixes
+
+* heatmap 컴포넌트 불필요 코드 삭제 ([6493cf0](https://github.com/3-idiots-team/it-diots/commit/6493cf0593c45c81524f5332fc2a6d6d142d7da3))
+* username 변경 ([2f1626b](https://github.com/3-idiots-team/it-diots/commit/2f1626bc13f0604ec2107af5282cfcef7c177bed))
+* 리뷰사항 반영 ([7e174a2](https://github.com/3-idiots-team/it-diots/commit/7e174a2f9cc5d288c35d286bf1fd252d8a47f221))
+* 미반영 파일 반영 ([10aaf23](https://github.com/3-idiots-team/it-diots/commit/10aaf235898f82cd91476c1cabbb2c787e2d901f))
+* 페이지 kebab-case로 변경 ([73d7a80](https://github.com/3-idiots-team/it-diots/commit/73d7a80b7a22e2ce68aa3072766a96ff58771e02))
+
+
+### Styles
+
+* main layout 스타일링 변경 ([9a23bd5](https://github.com/3-idiots-team/it-diots/commit/9a23bd512eefe622abe726b7a377979e49bbf9bb))
+
 ## [1.1.0](https://github.com/3-idiots-team/it-diots/compare/v1.0.0...v1.1.0) (2025-03-18)
 
 
